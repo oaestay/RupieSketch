@@ -1,0 +1,93 @@
+% Plantilla para documentos LaTeX para enunciados
+% Por Pedro Pablo Aste Kompen - ppaste@uc.cl
+% Licencia Creative Commons BY-NC-SA 3.0
+% http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+\documentclass[12pt]{article}
+
+% Margen de 1 pulgada por lado
+\usepackage{fullpage}
+% Incluye gráficas
+\usepackage{graphicx}
+% Packages para matemáticas, por la American Mathematical Society
+\usepackage{amssymb}
+\usepackage{amsmath}
+% Desactivar hyphenation
+\usepackage[none]{hyphenat}
+% Saltar entre párrafos - sin sangrías
+\usepackage{parskip}
+% Español y UTF-8
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+% Links en el documento
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{minipage}{2.3cm}
+\includegraphics[width=2cm]{img/logo.jpg}
+\vspace{0.5cm} % Altura de la corona del logo, así el texto queda alineado verticalmente con el círculo del logo.
+\end{minipage}
+\begin{minipage}{\linewidth}
+\textsc{\raggedright \footnotesize
+Pontificia Universidad Católica de Chile \\
+Departamento de Ciencias de la Computación \\
+IIC2513 - Tecnologías y Aplicaciones Web \\
+Proyecto: Save me Sensei!\\
+Grupo: Rupie\\
+Germán Contreras\\
+Óscar Estay\\} % REEMPLAZAR EL CURSO
+% INSERTAR NOMBRE(S)
+\end{minipage}
+
+
+% Titulo
+\begin{center}
+\vspace{0.5cm}
+{\huge\bf Entrega 1}\\
+\vspace{0.2cm}
+16 de Septiembre de 2015\\
+%\vspace{0.2cm}
+%\footnotesize{Ayudante: Pedro Aste - ppaste@uc.cl}
+\vspace{0.2cm}
+\rule{\textwidth}{0.1mm}
+\end{center}
+
+% Cuerpo del documento ejemplo
+
+\section*{Actores y principales casos de uso}
+
+Los actores pueden ser divididos en:
+\begin{itemize}
+  \item{Usuarios inscritos: Los usuarios inscritos tienen un perfil en la base
+  de datos de la aplicación. Contienen un username que los identifica, su mail,
+  una password, y un perfil. Dentro del perfil, el usuario puede agregar su
+  nombre a la cuenta (que por default será igual a su username), una foto,
+  configurar su horario de disponibilidad, agregar un rango de dinero que está
+  dispuesto a pagar o cobrar por sus clases y agregar materias sobre las que
+  quiere aprender o enseñar. Además, el perfil mostrará la cantidad de clases
+  recibidas o impartidas, una calificación como alumno y como profesor, dada por
+  los profesores y alumnos que haya tenido, y también tendrá un muro, donde los
+  demás usuarios inscritos podrán escribir mensajes.\\
+  Al abrir la aplicación, los usuarios inscritos serán recibidos por un portal,
+  que mostrará los últimos avisos publicados, algunos random y un cuadro en el
+  que el usuario podrá publicar un aviso. También tendrá un panel que le dará
+  acceso a su perfil, al foro, a la configuración de su información y a una
+  navegación por los avisos. Contendrá un buscador de avisos y un buscador de
+  personas\\
+  Tendrá autorización para publicar preguntas o algún otro tema y comentar en el
+  foro. También podrá calificar usuarios con los que haya tenido interacciones y
+  publicar en el muro de los mismos.\\
+  }
+  \item{Usuarios no inscritos: Los usuarios no inscritos no podrán tener
+  interacciones con los demás usuarios inscritos, pero si podrán navegar por la
+  aplicación. Podrán ver los mensajes del foro, los perfiles de los usuarios y
+  los avisos publicados.\\}
+  \item{Administradores: Usuarios inscritos pero con el poder de hacer tareas
+  administrativas, como borrar temas del foro, de algún muro, cerrar terminar el
+  foro }
+
+\end{itemize}
+
+% Fin del documento
+\end{document}
