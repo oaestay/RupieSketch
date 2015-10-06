@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
     get 'users' => 'users#index'
+    get 'users/new' => 'users#new', as: :new_user
+    get 'users/:id' => 'users#show', as: :user
+    get 'users/:id/edit' => 'users#edit', as: :edit_user
+    patch 'users/:id' => 'users#update'
+    post 'users' => 'users#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

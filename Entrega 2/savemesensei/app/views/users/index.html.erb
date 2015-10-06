@@ -1,0 +1,14 @@
+<div class="users-index">
+    <% @users.each do |u| %>
+    <div class="user-index">
+        <div class="avatar-user-index">
+            <%= image_tag u.image %>
+        </div>
+        <div class="name-user-index">
+            <%= u.first_name + ' ' + u.last_name %>
+        </div>
+        <%= link_to 'Más', u %>
+    </div>
+    <% end %>
+    <%= link_to 'Nuevo usuario', new_user_path %>
+</div>

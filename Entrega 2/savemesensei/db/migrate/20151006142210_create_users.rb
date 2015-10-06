@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
         t.string :location
         t.integer :age
         t.string :gender
-        t.string :image
+        t.string :image, default: 'pug.jpg'
 
       t.timestamps null: false
     end

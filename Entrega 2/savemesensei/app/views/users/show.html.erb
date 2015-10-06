@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<div class="users-show">
+    <div class="image-users-show">
+        <%= image_tag @user.image %>
+    </div>
+    <div class="name-users-show">
+        <%= @user.first_name + ' ' + @user.last_name %>
+    </div>
+    <div class="info-users-show">
+        <p>Edad: <%= @user.age %></p>
+        <p>Género: <%= @user.gender %></p>
+        <p>Localización: <%= @user.location %></p>
+    </div>
+    <%= link_to 'Volver', users_path %>
+</div>

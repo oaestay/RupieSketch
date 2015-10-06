@@ -1,0 +1,41 @@
+<%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@user.errors.count, "error") %> impidieron que el usuario se puediese guardar:</h2>
+            <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+    </div>
+    <div class="field">
+        <%= f.label :last_name %><br>
+        <%= f.text_field :last_name %>
+    </div>
+    <div class="field">
+        <%= f.label :location %><br>
+        <%= f.text_field :location %>
+    </div>
+    <div class="field">
+        <%= f.label :age %><br>
+        <%= f.text_field :age %>
+    </div>
+    <div class="field">
+        <%= f.label :gender %><br>
+        <%= select_tag(:gender, options_for_select([['Hombre', 'Hombre'], ['Mujer', 'Mujer']], 2)) %>
+    </div>
+    <div class="field">
+        <%= f.label :image %><br>
+        <%= f.text_field :image %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+    <%= link_to 'Volver', users_path %>
+<% end %>
