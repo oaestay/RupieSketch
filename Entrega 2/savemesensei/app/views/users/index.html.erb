@@ -8,6 +8,7 @@
             <%= u.first_name + ' ' + u.last_name %>
         </div>
         <%= link_to 'Más', u %>
+        <%= link_to 'Editar', edit_user_path(u) %>
     </div>
     <% end %>
     <%= link_to 'Nuevo usuario', new_user_path %>

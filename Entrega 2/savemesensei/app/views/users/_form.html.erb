@@ -9,7 +9,18 @@
             </ul>
         </div>
     <% end %>
-
+    <div class="field">
+        <%= f.label :username %><br>
+        <%= f.text_field :username %>
+    </div>
+    <div class="field">
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+    </div>
+    <div class="field">
+        <%= f.label :email %><br>
+        <%= f.email_field :email %>
+    </div>
     <div class="field">
         <%= f.label :first_name %><br>
         <%= f.text_field :first_name %>
@@ -24,11 +35,15 @@
     </div>
     <div class="field">
         <%= f.label :age %><br>
-        <%= f.text_field :age %>
+        <%= f.number_field :age %>
     </div>
     <div class="field">
         <%= f.label :gender %><br>
-        <%= select_tag(:gender, options_for_select([['Hombre', 'Hombre'], ['Mujer', 'Mujer']], 2)) %>
+        <%= f.select(:gender) do %>
+            <% [['Hombre', 'Hombre'], ['Mujer', 'Mujer']].each do |c| -%>
+                <%= content_tag(:option, c.first, value: c.last) %>
+            <% end %>
+        <% end %>
     </div>
     <div class="field">
         <%= f.label :image %><br>
@@ -37,5 +52,4 @@
     <div class="actions">
         <%= f.submit %>
     </div>
-    <%= link_to 'Volver', users_path %>
 <% end %>

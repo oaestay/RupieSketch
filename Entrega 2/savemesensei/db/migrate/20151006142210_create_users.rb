@@ -4,6 +4,9 @@ class CreateUsers < ActiveRecord::Migration
         t.string :first_name
         t.string :last_name
         t.string :location
+        t.string :username
+        t.string :password
+        t.string :email
         t.integer :age
         t.string :gender
         t.string :image, default: 'pug.jpg'
