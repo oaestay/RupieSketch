@@ -7,6 +7,14 @@ Rails.application.routes.draw do
     patch 'users/:id' => 'users#update'
     put 'users/:id' => 'users#update'
     delete 'users/:id' => 'users#destroy'
+    get 'notices' => 'notices#index'
+    post 'notices' => 'notices#create'
+    get 'notices/new' => 'notices#new', as: :new_notice
+    get 'notices/:id/edit' => 'notices#edit', as: :edit_notice
+    get 'notices/:id' => 'notices#show', as: :notice
+    patch 'notices/:id' => 'notices#update'
+    put 'notices/:id' => 'notices#update'
+    delete 'notices/:id' => 'notices#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
