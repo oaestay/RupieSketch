@@ -15,6 +15,7 @@
         <p>Género: <%= @user.gender %></p>
         <p>Localización: <%= @user.location %></p>
     </div>
+    <%= link_to 'Editar', edit_user_path(@user) %>
     <%= link_to 'Eliminar', @user, method: :delete, data: { confirm: '¿Estás seguro?'} %>
     <%= link_to 'Volver', users_path %>
 </div>

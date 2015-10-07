@@ -43,7 +43,7 @@ class NoticesController < ApplicationController
         redirect_to notices_url
     end
     private
-    def user_params
-        params.require(:notice).permit(:user, :title, :message, :qcomments, :created_at)
+    def notice_params
+        params.require(:notice).permit(:user_id, :title, :message, :qcomments, :created_at)
     end
 end

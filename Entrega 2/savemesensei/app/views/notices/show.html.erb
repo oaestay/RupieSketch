@@ -3,18 +3,27 @@
 <% end %>
 <div class="notices-show">
     <div class="title-notices-show">
-        <%= image_tag @user.image %>
+        <h1><%= @notice.title %></h1>
     </div>
-    <div class="name-users-show">
-        <%= @user.first_name + ' ' + @user.last_name %>
+    <div class="user-notices-show">
+        <p>
+            Escrito por <%= @user.first_name + ' ' + @user.last_name %>
+        </p>
     </div>
-    <div class="info-users-show">
-        <p>Username: <%= @user.username %></p>
-        <p>Email: <%= @user.email %></p>
-        <p>Edad: <%= @user.age %></p>
-        <p>Género: <%= @user.gender %></p>
-        <p>Localización: <%= @user.location %></p>
+    <div class="message-notices-show">
+        <%= @notice.message %>
     </div>
-    <%= link_to 'Eliminar', @user, method: :delete, data: { confirm: '¿Estás seguro?'} %>
-    <%= link_to 'Volver', users_path %>
+    <div class="created-notices-show">
+        <p>
+            Escrito a las <%= @notice.created_at %>
+        </p>
+    </div>
+    <div class="created-notices-show">
+        <p>
+            Cantidad de comentarios: <%= @notice.qcomments %>
+        </p>
+    </div>
+    <%= link_to 'Editar', edit_notice_path(@notice) %>
+    <%= link_to 'Eliminar', @notice, method: :delete, data: { confirm: '¿Estás seguro?'} %>
+    <%= link_to 'Volver', notices_path %>
 </div>
